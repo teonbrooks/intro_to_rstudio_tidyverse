@@ -2,12 +2,17 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
 This is the repo for an introduction to R using the `tidyverse`
-developed for [BC
-Stats](https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats).
+developed for an internal workshop at Mozilla. It is hybridized version
+based off of @cwickham [BC
+Stats](https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats)
+and the [RStudio Atlanta
+workshop](https://github.com/cdhowe/atl-welcome-tidyverse).
 
-The repo currently reflects a 1 day version to be delivered Oct 2019. If
-you are looking for an older version, try:
+The repo currently reflects a 2.5 day version to be delivered Dec 2019.
+If you are looking for an older version, try:
 
+  - [Oct 2019: A 1 day
+    version](https://github.com/cdhowe/atl-welcome-tidyverse/tree/bb834598453accfd956d1f40bfe3b0d6f5830743)
   - [Jul 2018: A 1.5 day
     version](https://github.com/cwickham/r_intro_bc_stats/tree/v2.0)
   - [Dec 2017: A 2.5 day
@@ -126,7 +131,7 @@ Day 1: afternoon
 
 <td>
 
-Tue Jul 24th 1pm-4:30pm
+Thu Dec 12th 12pm-5pm
 
 </td>
 
@@ -142,19 +147,20 @@ Getting Started with R and RStudio
 
 <td>
 
-Day 2: morning
+Day 2: afternoon
 
 </td>
 
 <td>
 
-Wed Jul 25th 8:30am-12pm
+Tue Dec 17th 2pm-4pm
 
 </td>
 
 <td>
 
-Data Visualization with <code>ggplot2</code>
+Data Manipulation with <code>dplyr</code> and Data Visualization 2 with
+<code>ggplot2</code>
 
 </td>
 
@@ -164,19 +170,19 @@ Data Visualization with <code>ggplot2</code>
 
 <td>
 
-Day 2: afternoon
+Day 3: afternoon
 
 </td>
 
 <td>
 
-Wed Jul 25th 1pm-4:30pm
+tba
 
 </td>
 
 <td>
 
-Data Manipulation with <code>dplyr</code> and <code>tidyr</code>
+Modelling, RMarkdown, and Application of Our Learnings
 
 </td>
 
@@ -256,6 +262,15 @@ Import CSV, SPSS and SAS data files
 
 </ul>
 
+<p>
+
+We will end the day with an introduction to data visualization using the
+package <code>ggplot2</code>. You'll see how <code>ggplot2</code>
+provides a framework for thinking about plots, which means you only need
+to learn one template to make almost any plot you can imagine.
+
+</p>
+
 <h3>
 
 Day 2 - Visualization and Manipulation of Data
@@ -264,27 +279,21 @@ Day 2 - Visualization and Manipulation of Data
 
 <p>
 
-We'll start the day with visualization of data in R using the package
-<code>ggplot2</code>. You'll see how <code>ggplot2</code> provides a
-framework for thinking about plots, which means you only need to learn
-one template to make almost any plot you can imagine. To practice,
-you'll make some of the most common kinds of data visualizations:
-histograms, scatterplots and time series plots, and continue building
-your skills as we continue through data manipulation.
-
-</p>
-
-<p>
-
 In the afternoon we'll focus of the most common types of data
 manipulation: extracting subsets from data, adding new variables and
 creating grouped summaries. You'll find that doing this is quite
 intuitive using the <code>dplyr</code> package which boils down
 manipulation into a set of verbs like: <code>filter()</code>,
-<code>mutate()</code> and <code>summarise()</code>. Occasionally, data
-won't come in quite the right shape for manipulation or visualization
-you want to do, so we'll also talk about the key parts of the
-<code>tidyr</code> package that help to reshape not not-so-tidy data.
+<code>mutate()</code> and <code>summarise()</code>.
+
+</p>
+
+<p>
+
+We'll finish the day with second half of the data visualization section
+with further exploration of the package <code>ggplot2</code>. To
+practice, you'll make some of the most common kinds of data
+visualizations: histograms, scatterplots and time series plots.
 
 </p>
 
@@ -320,13 +329,39 @@ Create grouped summaries of data
 
 </li>
 
-<li>
-
-Reshape data for use with tidy tools
-
-</li>
-
 </ul>
+
+<h3>
+
+Day 3 - Modelling, RMarkdown, and Application of Our Learnings
+
+</h3>
+
+<p>
+
+We will introduce some of the most common modelling techniques that are
+used in R, primarily <code>lm()</code>. We will also be using the
+package <code>broom</code> to present the results of our modeling into
+nice and presentable tables.
+
+</p>
+
+<p>
+
+We will then proceed to learn more about RMarkdown, the document type
+used throughout these modules, and how we can customize its outputs and
+harness the full rendering power of the document.
+
+</p>
+
+<p>
+
+We will end our workshop with a hands-on practicuum that ties together
+all the key concepts from our journey into R. We will explore some
+survey data from one of our studies at Mozilla and work on a report to
+communicate the results.
+
+</p>
 
 <h2>
 
@@ -453,25 +488,8 @@ Getting the materials
 
 <p>
 
-To download the materials, open RStudio and on the Console run:
-
-</p>
-
-<pre><code>usethis::use_course(&quot;bit.ly/rintro-bc&quot;)
-</code></pre>
-
-<p>
-
-After a pause, you'll be asked a few questions about the download
-process. The materials will be downloaded, unzipped to your Desktop, and
-a new RStudio session will open.
-
-</p>
-
-<p>
-
-You only need to do this once. If you close RStudio, and want to pick it
-up again later (i.e. on the day of the training):
+To download the materials, download the zip bundle
+<a href="https://github.com/teonbrooks/intro_to_rstudio_tidyverse/archive/mozilla_ur_workshop.zip">here</a>.
 
 </p>
 
@@ -496,33 +514,13 @@ RStudio
 
 <h2>
 
-rstudio.cloud
-
-</h2>
-
-<p>
-
-If you have a good internet connection, an alternative to installing the
-pacakges, and getting the materials, locally is to use
-<a href="https://rstudio.cloud/project/49127">https://rstudio.cloud/project/49127</a>
-
-</p>
-
-<p>
-
-You may need to sign up for an account (free) first.
-
-</p>
-
-<h2>
-
 Instructor Info
 
 </h2>
 
 <p>
 
-Charlotte Wickham
+Teon Brooks
 
 </p>
 
@@ -530,19 +528,19 @@ Charlotte Wickham
 
 <li>
 
-<a href="cwickham@gmail.com">cwickham@gmail.com</a>
+<a href="mailto:teon.brooks@gmail.com">teon.brooks@gmail.com</a>
 
 </li>
 
 <li>
 
-<a href="http://www.cwick.co.nz">cwick.co.nz</a>
+<a href="https://teonian.com">teonian.com</a>
 
 </li>
 
 <li>
 
-@<a href="http://www.twitter.com/cvwickham">cvwickham</a>
+@<a href="http://www.twitter.com/teonbrooks">teonbrooks</a>
 
 </li>
 

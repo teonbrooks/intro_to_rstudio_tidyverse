@@ -12,10 +12,12 @@ knitr::opts_chunk$set(
 library(htmltools)
 ```
 
-This is the repo for an introduction to R using the `tidyverse` developed for [BC Stats](https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats).
+This is the repo for an introduction to R using the `tidyverse` developed for an internal workshop at Mozilla.
+It is hybridized version based off of @cwickham [BC Stats](https://www2.gov.bc.ca/gov/content/data/about-data-management/bc-stats) and the [RStudio Atlanta workshop](https://github.com/cdhowe/atl-welcome-tidyverse).
 
-The repo currently reflects a 1 day version to be delivered Oct 2019. If you are looking for an older version, try:
+The repo currently reflects a 2.5 day version to be delivered Dec 2019. If you are looking for an older version, try:
 
+-   [Oct 2019: A 1 day version](https://github.com/cdhowe/atl-welcome-tidyverse/tree/bb834598453accfd956d1f40bfe3b0d6f5830743)
 -   [Jul 2018: A 1.5 day version](https://github.com/cwickham/r_intro_bc_stats/tree/v2.0)
 -   [Dec 2017: A 2.5 day version](https://github.com/cwickham/r_intro_bc_stats/tree/v1.0)
 

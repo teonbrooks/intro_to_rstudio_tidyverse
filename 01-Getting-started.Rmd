@@ -68,7 +68,7 @@ sd(pull(.data = starwars, var = mass)
 ```
 
 ```{r, error=TRUE}
-my_name <- "Charlotte'
+my_name <- "Teon'
 ```
 
 ```{r, error=TRUE}
