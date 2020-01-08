@@ -137,7 +137,8 @@ Thu Dec 12th 12pm-5pm
 
 <td>
 
-Getting Started with R and RStudio
+Getting Started with R and RStudio, and Data Visualization 2 with
+<code>ggplot2</code>
 
 </td>
 
@@ -159,7 +160,7 @@ Tue Dec 17th 2pm-4pm
 
 <td>
 
-Data Manipulation with <code>dplyr</code> and Data Visualization 2 with
+Data Manipulation with <code>dplyr</code>, and Data Visualization 2 with
 <code>ggplot2</code>
 
 </td>

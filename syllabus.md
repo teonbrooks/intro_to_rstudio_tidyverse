@@ -40,12 +40,12 @@ Schedule
 <tr class="odd">
 <td>Day 1: afternoon</td>
 <td>Thu Dec 12th 12pm-5pm</td>
-<td>Getting Started with R and RStudio</td>
+<td>Getting Started with R and RStudio, and Data Visualization 2 with <code>ggplot2</code></td>
 </tr>
 <tr class="even">
 <td>Day 2: afternoon</td>
 <td>Tue Dec 17th 2pm-4pm</td>
-<td>Data Manipulation with <code>dplyr</code> and Data Visualization 2 with <code>ggplot2</code></td>
+<td>Data Manipulation with <code>dplyr</code>, and Data Visualization 2 with <code>ggplot2</code></td>
 </tr>
 <tr class="odd">
 <td>Day 3: afternoon</td>
