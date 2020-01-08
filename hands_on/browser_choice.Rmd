@@ -1,0 +1,26 @@
+---
+title: "Browser Choice"
+output: html_document
+---
+
+```{r}
+library(tidyverse)
+library(stringr)
+```
+
+
+```{r}
+data <- read_csv("intro_to_rstudio_tidyverse/data/browser-choice-20191113144643-SurveyExport.csv")
+```
+```{r}
+# this will return all the questions we are interested in
+questions <- data[-13:-1]
+```
+
+```{r message=FALSE, warning=FALSE}
+ggplot(questions) + 
+  # get is weird...
+  geom_histogram(mapping=aes(x=get(colnames(questions)[1])), stat='count') +
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+```
+

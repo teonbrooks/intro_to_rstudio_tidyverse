@@ -1,0 +1,50 @@
+---
+title: "FPN Exit Survey"
+output: html_document
+---
+
+```{r setup}
+library(readr)
+library(tidyverse)
+```
+This is the beginning to my report. Here's the survey data from Firefox Private Network.
+
+
+```{r include=FALSE}
+setwd('~/codespace/intro_to_rstudio_tidyverse')
+data <- read_csv("data/private network - exit survey - 20191114142053-SurveyExport.csv")
+glimpse(data)
+```
+Let's look at the responses from the question, `Why did you uninstall the Firefox Private Network?`.
+
+```{r message=FALSE, warning=FALSE}
+ggplot(data=data) + geom_histogram(mapping=aes(x=`Why did you uninstall the Firefox Private Network?`), stat="count")
+```
+It seems that the most common response for this question was that "It was not working correctly". That's a bummer :/
+
+Hmm...also, the axes on the plot isn't particularly easy to read. Let's see if we can correct this.
+
+```{r message=FALSE, warning=FALSE}
+# Found out how to wrap text on stackoverflow: https://stackoverflow.com/questions/21878974/auto-wrapping-of-labels-via-labeller-label-wrap-in-ggplot2
+library(stringr)
+
+ggplot(data=data) + 
+  geom_histogram(mapping=aes(x=`Why did you uninstall the Firefox Private Network?`), stat="count") +
+  # this is special sauce
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+```
+
+Let's check out another question.
+```{r message=FALSE, warning=FALSE}
+ggplot(data=data) + 
+  geom_histogram(mapping=aes(x=`What sort of problems did you have with Firefox Private Network?`), stat='count') + 
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10))
+```
+```{r message=FALSE, warning=FALSE}
+ggplot(data=data) + 
+  geom_histogram(mapping=aes(x=`What sort of problems did you have with Firefox Private Network?`, color=`Why did you uninstall the Firefox Private Network?`), stat='count') + 
+  scale_x_discrete(labels = function(x) str_wrap(x, width = 10)) +
+  theme(legend.position="bottom")
+```
+
+
